@@ -156,6 +156,7 @@ class CountryPicker extends React.Component {
             <Image
               style={styles.imgStyle}
               source={{uri: CountryFlags[this.state.cca2]}}/>
+              <Text>{this.country}</Text>
           </View>
         </TouchableOpacity>
         <Modal visible={this.state.modalVisible}>
@@ -186,6 +187,7 @@ var styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#FFF',
     
   },
   imgStyle: {
