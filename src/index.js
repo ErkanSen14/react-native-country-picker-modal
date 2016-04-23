@@ -192,8 +192,6 @@ var styles = StyleSheet.create({
   },
   imgStyle: {
     resizeMode: 'stretch',
-    width: 25,
-    height: 19,
     borderWidth: 1 / PixelRatio.get(),
     borderColor: '#eee',
     opacity: 0.8
