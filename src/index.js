@@ -183,11 +183,10 @@ var styles = StyleSheet.create({
     padding: Ratio.getPercent(2)
   },
   touchFlag: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    margin: Ratio.getPercent(0.5),
-    width: Ratio.getWidthPercent(5.5),
-    height: Ratio.getHeightPercent(2.5)
+    
   },
   imgStyle: {
     resizeMode: 'stretch',
