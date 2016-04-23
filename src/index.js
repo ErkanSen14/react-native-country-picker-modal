@@ -153,11 +153,8 @@ class CountryPicker extends React.Component {
           onPress={()=> this.setState({modalVisible: true})}
           activeOpacity={0.7}>
           <View style={styles.touchFlag}>
-            <Image
-              style={styles.imgStyle}
-              source={{uri: CountryFlags[this.state.cca2]}}/>
-          </View>
             <Text>{this.country}</Text>
+          </View>
         </TouchableOpacity>
         <Modal visible={this.state.modalVisible}>
           <ScrollView
