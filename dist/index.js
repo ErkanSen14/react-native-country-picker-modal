@@ -89,10 +89,11 @@ var CountryPicker = function (_React$Component) {
   }, {
     key: '_onSelect',
     value: function _onSelect(country) {
-
+      console.log(country)
       this.setState({
         modalVisible: false,
-        cca2: country.cca2
+        cca2: country.cca2,
+        currentCountry: country
       });
 
       if (this.props.onChange) {
@@ -201,7 +202,7 @@ var CountryPicker = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _this5 = this;
-
+      console.log(_this5)
       return _reactNative2.default.createElement(
         _reactNative.View,
         null,
@@ -215,6 +216,7 @@ var CountryPicker = function (_React$Component) {
           _reactNative2.default.createElement(
             _reactNative.View,
             { style: styles.touchFlag },
+            _reactNative2.default.createElement(_reactNative.Text,{style: styles.countryName}, _this5.state.currentCountry.name.common),
             _reactNative2.default.createElement(_reactNative.Image, {
               style: styles.imgStyle,
               source: { uri: _CountryFlags2.default[this.state.cca2] } })
@@ -259,11 +261,11 @@ var styles = _reactNative.StyleSheet.create({
     padding: _Ratio2.default.getPercent(2)
   },
   touchFlag: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    margin: _Ratio2.default.getPercent(0.5),
-    width: _Ratio2.default.getWidthPercent(5.5),
-    height: _Ratio2.default.getHeightPercent(2.5)
+    height: window.height,
+    backgroundColor: '#fff'
   },
   imgStyle: {
     resizeMode: 'stretch',
